@@ -4,15 +4,15 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Hello World'
-        sh '''pwd
-mvn -Dmaven.test.failure.ignore=true clean package'''
+        sh 'pwd'
+        sh 'mvn -Dmaven.test.failure.ignore=true clean package'
       }
     }
 
     stage('Deliver') {
       steps {
-        sh '''pwd
-cp target/*.war /var/lib/tomcat9/webapps'''
+        sh 'pwd'
+        sh 'cp target/*.war /var/lib/tomcat9/webapps'
       }
     }
 
