@@ -12,7 +12,7 @@ pipeline {
     stage('Deliver') {
       steps {
         sh 'pwd'
-        sh 'cp target/*.war /var/lib/tomcat9/webapps'
+        sh 'cp target/*.war /Users/user00381/Desktop/JavaVulnerableLab'
       }
     }
 
